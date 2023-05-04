@@ -1,0 +1,220 @@
+/* scrolling section */
+
+.scrolling-sections {
+  display: flex;
+  gap: 1rem;
+}
+
+.scrolling-section {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  /* transform: translateX(-300px); */
+  animation: scrolling 20s linear infinite;
+}
+
+.scrolling-section > *,
+.reverse-scroll > * {
+  color: var(--light-gray);
+  font-size: var(--fs-xl);
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+.reverse-scroll {
+  display: flex;
+  gap: 1rem;
+  animation: reverseScroll 30s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes reverseScroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.scrolling-section:hover,
+.reverse-scroll:hover {
+  animation-play-state: paused;
+}
+
+.scrolling-section > *:hover,
+.reverse-scroll > *:hover {
+  color: var(--primary);
+}
+
+/* card section */
+
+.card-body {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.card {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 5px;
+  width: 250px;
+  height: 250px;
+  padding: 5px;
+  margin: 10px;
+  position: relative;
+  isolation: isolate;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-background {
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.source {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.source-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.source-link:hover {
+  color: var(--darker-pink);
+}
+
+.card-background::after {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+        farthest-side at -33.33% 50%,
+        #0000 52%,
+        #ff8fab 54% 57%,
+        #0000 59%
+      )
+      0 calc(128px / 2),
+    radial-gradient(
+        farthest-side at 50% 133.33%,
+        #0000 52%,
+        #ff8fab 54% 57%,
+        #0000 59%
+      )
+      calc(128px / 2) 0,
+    radial-gradient(
+      farthest-side at 133.33% 50%,
+      #0000 52%,
+      #ff8fab 54% 57%,
+      #0000 59%
+    ),
+    radial-gradient(
+      farthest-side at 50% -33.33%,
+      #0000 52%,
+      #ff8fab 54% 57%,
+      #0000 59%
+    );
+  background-color: inherit;
+  background-size: calc(128px / 4.667) 128px, 128px calc(128px / 4.667);
+  rotate: 0deg;
+  inset: 0;
+  z-index: -3;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.card-background::before {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-color: inherit;
+  rotate: 0deg;
+  inset: 0;
+  z-index: -2;
+  filter: brightness(0.65);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  outline-offset: -5px;
+}
+
+.card-background:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.card-background:hover::after,
+.card-background:hover::before {
+  opacity: 1;
+}
+
+.card-background:hover::after {
+  rotate: -10deg;
+}
+
+.card-background:hover::before {
+  rotate: 10deg;
+}
+
+.card-background:hover .source {
+  opacity: 1;
+  animation: var(--animation-slide-in-up);
+}
+
+/* end of card section */
+
+@media (hover: none) {
+  .card-background {
+    box-shadow: var(--shadow-4);
+  }
+
+  .card:nth-child(1) {
+    background-color: var(--orange-3);
+  }
+
+  .card:nth-child(2) {
+    background-color: var(--purple-3);
+  }
+
+  .card:nth-child(3) {
+    background-color: var(--pink-3);
+  }
+
+  .card:nth-child(4) {
+    background-color: var(--blue-3);
+  }
+
+  .card:nth-child(5) {
+    background-color: var(--indigo-3);
+  }
+
+  .card:nth-child(6) {
+    background-color: var(--green-3);
+  }
+
+  .card-background .source {
+    opacity: 1;
+  }
+}
