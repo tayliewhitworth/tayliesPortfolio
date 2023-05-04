@@ -1,38 +1,51 @@
-// images will go here style: import 'Image Name' from './assets/imageName.jpg
-
-import img1 from "./assets/1.png";
-import img2 from "./assets/2.png";
-import img3 from "./assets/3.png";
 import img4 from "./assets/4.png";
-import smallLvl from './assets/smallLvl.png'
+import smallLvl from "./assets/smallLvl.png";
+import bookKeeper from "./assets/bookKeeper-main.png";
+import studyProMain from "./assets/studypro-frontpage.jpeg";
+import flashcards from "./assets/flashcards-all.png";
 
-import img5 from "./assets/5.png";
-import img6 from "./assets/6.png";
 import img7 from "./assets/7.png";
-import img8 from "./assets/8.png";
-import largeLvl from './assets/largeLvl.png'
+import largeLvl from "./assets/largeLvl.png";
 
 export const projectData = [
   {
     id: 1,
-    name: "Time Tracking Dashboard",
+    name: "Book Keeper",
     color: "var(--purple-3)",
     description:
-      "This web app was made to track a users time spent on different activities. The layout was inspired by a Frontend Mentor challenge. I added a todo list page so a user can add tasks to a todo list. The tasks can be edited and deleted and the data will be saved to the users local storage.",
-    tags: ["HTML", "CSS", "JavaScript", "JSON", "localStorage"],
+      "This was a fullstack app I made where users can connect and post about the books they have read. I used Next.js, Tailwind, TypeScript, Prisma and PostgreSQL to create this app. I also added A.I. to generate book recommendations.",
+    tags: ["Next.js", "Tailwind", "TypeScript", "Prisma", "PostgreSQL"],
     howBuilt:
-      "I built this app using JavaScript, HTML and CSS. I got the data from a JSON file provided by Frontend Mentor. This app is a time tracking dashboard that tracks time spent on different activites. I also added a todo list that uses local storage to remember the users tasks. This allows the user to create, update and delete a task.",
+      "I built this app using the t3 stack which consists of Tailwind css, TypeScript and TRPC. I used Next.js for the frontend and Prisma and PostgreSQL for the backend. I also added a few A.I. features to generate book recommendations and a book search feature.",
     challenges:
-      "When I was building this I struggled with creating clean JavaScript code. At first, I had a function for everything but I realized I could combine the functions into one. This was my first time working with JSON data so I had to figure out the best way to access that and use the require import.",
+      "This project was my first time working with the t3 stack so I was learning while building. I also had to learn how to use Prisma and PostgreSQL. When I was adding the A.I. features, I had to learn how to use the Google Books API and how to use the data from the API.",
     improvements:
-      "I would change the way I used the JSON data and make it so a user can add their own data like the todo list.",
-    img: img3,
-    bigImg: img5,
-    link: "https://timetracker101.netlify.app/",
-    githubLink: "https://github.com/tayliewhitworth/timetracker",
+      "I would like to add a feature where users can review books posts and add friends to their book club.",
+    img: bookKeeper,
+    bigImg: bookKeeper,
+    link: "https://bookkeeper-eight.vercel.app/",
+    githubLink: "https://github.com/tayliewhitworth/bookkeeper",
   },
   {
     id: 2,
+    name: "StudyPro",
+    color: "var(--pink-3)",
+    description:
+      "This is a flashcards app where a user can create flashcards to help study. I used the MERN stack to build this app. I integrated A.I. to generate flashcards from a topic entered by the user. I also added a spaced repetition algorithm to help the user review.",
+    tags: ["React", "Node.js", "OpenAI", "Redux", "MongoDB"],
+    howBuilt:
+      "I built this app using the MERN stack. I used React for the frontend and Node.js for the backend. I used Redux for state management and React Router for routing. I used MongoDB for the database. I also integrated OpenAI to generate flashcards from a topic entered by the user. I used a spaced repetition algorithm to help the user review.",
+    challenges:
+      "The main challenge I had with building this app was making sure I had good security and was using the best practices. I also had to learn how to use OpenAI and how to use the data from the API.",
+    improvements:
+      "I would like to add Clerk Auth for authentification and add a feature where users can add friends and share flashcards.",
+    img: studyProMain,
+    bigImg: flashcards,
+    link: "https://studypro.onrender.com/",
+    githubLink: "https://github.com/tayliewhitworth/studypro",
+  },
+  {
+    id: 3,
     name: "Level Solar",
     color: "var(--green-3)",
     description:
@@ -48,24 +61,6 @@ export const projectData = [
     bigImg: largeLvl,
     link: "https://lvlsolar.com/",
     githubLink: "https://github.com/tayliewhitworth/level-energy.github.io",
-  },
-  {
-    id: 3,
-    name: "WordSearchAPI",
-    color: "var(--pink-3)",
-    description:
-      "This is a dictionary api that allows a user to search for any word. I used the Free Dictionary API for the word data. I also added a light and dark mode feature. Since the API is free, there are times when it isn't working! If that happens on the day you use it, just wait a few hours and try again!",
-    tags: ["HTML", "CSS", "JavaScript", "API", "localStorage"],
-    howBuilt:
-      "I built this app using HTML, CSS, and JavaScript. I had to use the Free Dicitonary API in order to get access to a dictionary. Since it is free, there are times when it won't work correctly. I also used localStorage to save the lighting mode to the users preference.",
-    challenges:
-      "The main challenge I had with building this app was the API not working at certain times but I don't have control over that.",
-    improvements:
-      "I would like to improve the API and find a better one that works majority of the time. I would also like to add a control flow for when the API is not working so the user will know that is is down.",
-    img: img1,
-    bigImg: img8,
-    link: "https://wordsearch101.netlify.app/",
-    githubLink: "https://github.com/tayliewhitworth/dictionaryAPI",
   },
   {
     id: 4,

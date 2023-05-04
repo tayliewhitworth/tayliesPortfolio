@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   transition: all 0.2s ease-in-out;
-  background-color: var(--pink-1);
+  /* background-color: var(--pink-1); */
 }
 
 .blur-filter {
@@ -76,8 +76,8 @@ main > article > .article-image-section {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgba(255, 229, 236, 0.5);
-  backdrop-filter: blur(10px);
+  /* background-color: rgba(255, 229, 236, 0.5);
+  backdrop-filter: blur(10px); */
 }
 
 main > article > .article-description-section {
