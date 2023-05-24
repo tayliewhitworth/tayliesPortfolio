@@ -1,225 +1,217 @@
 .container {
-    min-height: 100vh;
-    max-width: 950px;
-    margin: auto;
-    padding-top: 3rem;
-    position: relative;
+  min-height: 100vh;
+  max-width: 950px;
+  margin: auto;
+  padding-top: 3rem;
+  position: relative;
+  padding-inline: 1.5rem;
 }
 
-
 .grid-container {
-    display: grid;
-    gap: 100px;
+  display: grid;
+  gap: 100px;
 }
 
 .main-header {
-    font-size: var(--fs-xl);
-    display: grid;
-    text-transform: uppercase;
-    position: relative;
-    margin-bottom: 5rem;
+  font-size: var(--fs-xl);
+  display: grid;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 5rem;
 }
 
-
-
 .name {
-    font-weight: 500;
-    animation: var(--animation-slide-in-right);
-    animation-timing-function: var(--ease-elastic-3);
-    animation-duration: 1s;
-    cursor: pointer;
+  font-weight: 500;
+  animation: var(--animation-slide-in-right);
+  animation-timing-function: var(--ease-elastic-3);
+  animation-duration: 1s;
+  cursor: pointer;
 }
 
 .name:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .title {
-    justify-self: flex-end;
-    animation: var(--animation-slide-in-left);
-    animation-timing-function: var(--ease-elastic-4);
-    animation-duration: 1s;
+  justify-self: flex-end;
+  animation: var(--animation-slide-in-left);
+  animation-timing-function: var(--ease-elastic-4);
+  animation-duration: 1s;
 }
 
 .accent-box {
-    width: 400px;
-    height: 500px;
-    background-image: var(--wavy-image);
-    background-color: var(--wavy-color);
-    position: absolute;
-    transform: translate(100%, 20%);
-    z-index: -1;
-    transition: all .5s ease;
-    animation: var(--animation-fade-in-bloom) forwards;
-    animation-duration: 2.5s;
+  width: 400px;
+  height: 500px;
+  background-image: var(--wavy-image);
+  background-color: var(--wavy-color);
+  position: absolute;
+  transform: translate(100%, 20%);
+  z-index: -1;
+  transition: all 0.5s ease;
+  animation: var(--animation-fade-in-bloom) forwards;
+  animation-duration: 2.5s;
 }
 
 .personal-intro {
-    display: grid;
-    gap: 1rem;
-    max-width: 600px;
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
 }
 
 .personal-intro p {
-    font-size: var(--fs-500);
+  font-size: var(--fs-500);
 }
 
 .specialized {
-    font-weight: bold;
-    text-transform: uppercase;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .contact-me {
-    text-decoration: none;
-    color: var(--main-light);
-    background-color: var(--primary);
-    width: fit-content;
-    padding: .5rem 1rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow-4);
-    transition: all .2s ease-in-out;
+  text-decoration: none;
+  color: var(--main-light);
+  background-color: var(--primary);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-4);
+  transition: all 0.2s ease-in-out;
 }
 
 .contact-me:hover,
 .contact-me:focus {
-    scale: 1.2;
-    background-color: var(--darker-pink);
-    animation: var(--animation-pulse) forwards;
+  scale: 1.2;
+  background-color: var(--darker-pink);
+  animation: var(--animation-pulse) forwards;
 }
-
 
 .card-section,
 .card-section-scroll {
-    margin-block: 100px;
+  margin-block: 100px;
 }
 
 .card-section-scroll {
-    /* width: 200%; */
-    overflow: hidden;
+  /* width: 200%; */
+  overflow: hidden;
 }
 
 .scroll-to-topBtn {
-    position: fixed;
-    bottom: 0;
-    left: 10px;
-    border: none;
-    background-color: transparent;
-    color: rgb(251 111 146 / .4);
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    opacity: 0;
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  border: none;
+  background-color: transparent;
+  color: rgb(251 111 146 / 0.4);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
 }
 
 .show-scroll-btn {
-    opacity: 1;
+  opacity: 1;
 }
 
 .scroll-to-topBtn:hover {
-    scale: 1.15;
-    color: var(--pink-8);
+  scale: 1.15;
+  color: var(--pink-8);
 }
 
 @media (max-width: 800px) {
-    .container {
-        padding-inline: 1.5rem;
-    }
+  .main-header {
+    margin-inline: -12px;
+  }
 
-    .grid-container {
-        gap: 200px;
-    }
+  .grid-container {
+    gap: 200px;
+  }
 
-    .accent-box {
-        right: 80%;
-        width: 300px;
-        height: 400px;
-    }
-
+  .accent-box {
+    right: 80%;
+    width: 300px;
+    height: 400px;
+  }
 }
-
 
 /* About Section */
 
 .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-block: 7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-block: 7rem;
 }
 
 .section-one > * {
-   margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .section-one h2 {
-    color: var(--primary);
-    font-size: var(--fs-xl);
+  color: var(--primary);
+  font-size: var(--fs-xl);
 }
 
 .section-one p {
-    font-size: 14px;
-    padding-bottom: 10px;
+  font-size: 14px;
+  padding-bottom: 10px;
 }
 
 .accordion-container {
-    align-self: end;
+  align-self: end;
 }
 
-
 .accordion-title {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--main-dark);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--main-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .hover:hover {
-    color: var(--darker-pink);
+  color: var(--darker-pink);
 }
 
 .accordion-btn {
-    background-color: transparent;
-    border: none;
-    color: inherit;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.5rem;
 }
 
 .plus-btn > * {
-    transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .plus-btn > *:hover {
-    rotate: 180deg;
+  rotate: 180deg;
 }
 
-
 .accordion-info {
-    display: grid;
-    gap: .5rem;
-    grid-template-columns: 1fr 1fr;
-    font-size: 12px;
-    padding-bottom: 2rem;
-    color: var(--primary);
-    font-weight: 600;
-    height: 0;
-    opacity: 0;
-    transition: all .2s ease-in-out;
-    pointer-events: none;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  font-size: 12px;
+  padding-bottom: 2rem;
+  color: var(--primary);
+  font-weight: 600;
+  height: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
 }
 
 .showItems {
-    height: 100%;
-    opacity: 1;
-    pointer-events: all;
+  height: 100%;
+  opacity: 1;
+  pointer-events: all;
 }
 
-
 @media (max-width: 800px) {
-    .about-container {
-        grid-template-columns: 1fr;
-    }
+  .about-container {
+    grid-template-columns: 1fr;
+  }
 }

@@ -14,7 +14,7 @@
 
 .description-section {
   display: grid;
-  gap: 3.5rem;
+  gap: 1.5rem;
 }
 
 .project-name-link {
@@ -58,7 +58,8 @@
 .tags {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
+  flex-wrap: wrap;
 }
 
 .tag {
@@ -103,8 +104,12 @@
     margin-block: 200px;
   }
 
-  .desc {
+  .description-section {
     width: 100%;
+  }
+
+  .desc {
+    width: 80%;
   }
 
   .img-section img {
