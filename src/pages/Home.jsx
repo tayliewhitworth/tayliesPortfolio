@@ -43,7 +43,7 @@ const Home = () => {
       <div className='grid-container' id='home'>
         <div className='main-header'>
           <h1 className='name'>Taylie Whitworth</h1>
-          <span className='title'>Front-end<br/> developer</span>
+          <span className='title'>FullStack<br/> developer</span>
           <div className='accent-box'></div>
         </div>
         <div className='personal-intro'>

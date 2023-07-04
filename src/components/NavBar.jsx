@@ -47,7 +47,7 @@ const NavBar = ({showItems}) => {
   return (
     <div className={hidden ? 'nav nav-background' : 'nav'}>
       <Link to='/' style={{textDecoration: 'none', color: 'inherit'}}>
-        <p className="logo">FrontEndDev</p>
+        <p className="logo">FullStackDev</p>
       </Link>
       {showItems ? (
         <div className={hidden ? "hidden-items nav-items" : "nav-items"}>
